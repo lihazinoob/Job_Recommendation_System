@@ -1,6 +1,7 @@
 import React from 'react'
 import TopMenuBar from './TopMenuBar'
 import SideBar from './SideBar'
+import 'font-awesome/css/font-awesome.min.css';
 const MainLayout = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const MainLayout = () => {
       {/* Sidebar and Main Content Wrapper */}
       <div className="flex">
         {/* Sidebar below the navbar */}
-        <SideBar />
+        <SideBar/>
 
         {/* Main Content Area */}
         
