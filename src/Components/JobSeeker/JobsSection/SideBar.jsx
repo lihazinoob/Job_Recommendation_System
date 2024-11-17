@@ -13,9 +13,9 @@ const SideBar = () => {
   return (
     <>
       <div
-        className={`h-screen bg-secondary text-black transition-all ease-in-out duration-500 ${
-          isOpen ? "w-64" : "w-20"
-        } fixed rounded-2xl shadow-xl mt-1 mb-1 ml-1`}
+        className={`h-screen bg-secondary text-black transition-all ease-in-out duration-500  ${
+          isOpen ? "w-64 small:w-20 med:w-40 large:w-60 xl:w-80" : "w-20"
+        }  rounded-2xl shadow-xl mt-1 mb-1 ml-1 `}
       >
         {/* Header section of the sidebar menu */}
         <img

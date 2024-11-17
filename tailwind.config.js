@@ -2,6 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      small: "200px",
+      med: "768px",
+      large: "1000px",
+      xl: "1280px",
+    },
     extend: {
       colors: {
         primary: "#F36259", // Custom dark blue

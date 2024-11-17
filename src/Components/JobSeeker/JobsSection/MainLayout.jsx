@@ -1,26 +1,20 @@
-import React from 'react'
-import TopMenuBar from './TopMenuBar'
-import SideBar from './SideBar'
-import 'font-awesome/css/font-awesome.min.css';
+import React from "react";
+import TopMenuBar from "./TopMenuBar";
+import SideBar from "./SideBar";
+import MainBody from "./MainBody";
+import "font-awesome/css/font-awesome.min.css";
 const MainLayout = () => {
   return (
     <>
-      <div>
-      {/* Top Menu Bar */}
-      <TopMenuBar />
 
-      {/* Sidebar and Main Content Wrapper */}
-      <div className="flex">
-        {/* Sidebar below the navbar */}
-        <SideBar/>
-
-        {/* Main Content Area */}
-        
+      <TopMenuBar  />
+      {/* Sidebar and MainBody Component will be side by side */}
+      <div className="flex h-screen">
+        <SideBar className="fixed"/>
+        <MainBody/>
       </div>
-    </div>
-
     </>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
