@@ -6,11 +6,11 @@ import MainBody from "./MainBody";
 const MainLayout = () => {
   return (
     <>
-
-      <TopMenuBar  />
+      
+      <TopMenuBar/>
       {/* Sidebar and MainBody Component will be side by side */}
       <div className="flex h-screen">
-        <SideBar className="fixed"/>
+        <SideBar/>
         <MainBody/>
       </div>
     </>
