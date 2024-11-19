@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // import SideBarImage from
-const SideBar = () => {
+const SideBar = ({shortListedJobs}) => {
   const [isOpen, setIsOpen] = useState(true);
   const buttonclick = () => {
     // setIsOpen(!isOpen);
@@ -33,30 +33,14 @@ const SideBar = () => {
             isOpen ? "opacity-100" : "opacity-0"
           }`}
         >
-          <a
-            href="#home"
-            className="text-lg font-semibold py-2 px-3 rounded-lg transition-all ease-in-out duration-500 hover:bg-black hover:text-white"
-          >
-            Home
-          </a>
-          <a
-            href="#jobs"
-            className="text-lg font-semibold py-2 px-3 rounded-lg transition-all ease-in-out duration-500 hover:bg-black hover:text-white"
-          >
-            Jobs
-          </a>
-          <a
-            href="#dashboard"
-            className="text-lg font-semibold py-2 px-3 rounded-lg transition-all ease-in-out duration-500 hover:bg-black hover:text-white"
-          >
-            Dashboard
-          </a>
-          <a
-            href="#profile"
-            className="text-lg font-semibold py-2 px-3 rounded-lg transition-all ease-in-out duration-500 hover:bg-black hover:text-white"
-          >
-            Profile
-          </a>
+          {shortListedJobs.map((job, index) => (
+            <div key={index} className="text-black">
+              <h1>{job}</h1>
+            </div>
+          ))}
+          
+          
+          
         </nav>
       </div>
     </>

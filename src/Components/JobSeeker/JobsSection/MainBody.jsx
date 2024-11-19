@@ -1,7 +1,7 @@
 import React from "react";
 import JobCard from "./JobCard";
 
-const MainBody = () => {
+const MainBody = ({addToShortListedJobs}) => {
   const jobs = [
     {
       postedTime: "Posted 2 hours ago",
@@ -35,6 +35,7 @@ const MainBody = () => {
           company={job.company}
           location={job.location}
           salary={job.salary}
+          onShortListed = {() => addToShortListedJobs(job.title)}
         />
       ))}
     </div>

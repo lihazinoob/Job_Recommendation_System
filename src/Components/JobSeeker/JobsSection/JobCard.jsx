@@ -1,6 +1,6 @@
 import React from "react";
 
-const JobCard = ({ postedTime, title, description, company, location, salary }) => {
+const JobCard = ({ postedTime, title, description, company, location, salary,onShortListed }) => {
   return (
     <>
       <div className="bg-gray-200 rounded-lg p-5 shadow-md ">
@@ -10,7 +10,9 @@ const JobCard = ({ postedTime, title, description, company, location, salary }) 
 
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
-            <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+            <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+              onClick={onShortListed}
+            >
               View Job
             </button>
           </div>
