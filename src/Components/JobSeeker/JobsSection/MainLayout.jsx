@@ -17,7 +17,7 @@ const MainLayout = () => {
   return (
     <>
       
-      <TopMenuBar/>
+      
       {/* Sidebar and MainBody Component will be side by side */}
       <div className="flex h-screen">
         <SideBar shortListedJobs={shortListedJobs}/>

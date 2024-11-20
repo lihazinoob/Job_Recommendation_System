@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 const SignUp = () => {
   const [formData, setFormData] = React.useState({
@@ -8,15 +9,34 @@ const SignUp = () => {
     password: "",
     country: "Bangladesh",
   });
+  const [message, setMessage] = React.useState("");
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    
+    try{
+      const response = await axios.post('http://localhost:8000/api/signup',formData);
+      setMessage(response.data.message);
+      console.log(response.data.status);
+    }
+    catch(err){
+      if(err.response && err.response.status === 400){
+        
+      }
+      else
+      {
+        console.log(response.data.status);
+        setMessage("Something went wrong. Please try again later.");
+      }
+    }
+    
   };
   return (
     <>
@@ -34,6 +54,8 @@ const SignUp = () => {
             </button>
           </div>
           <div className="text-center text-gray-500 my-4">or</div>
+          <p>{message}</p>
+
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4 mb-4">
               <input
