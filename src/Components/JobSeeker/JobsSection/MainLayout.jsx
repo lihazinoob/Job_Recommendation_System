@@ -8,6 +8,9 @@ const MainLayout = () => {
 
 
   const addToShortListedJobs = (jobTitle) =>{
+    if(shortListedJobs.includes(jobTitle)){
+      return;
+    }
     setShortListedJobs([...shortListedJobs,jobTitle]);
     // console.log("Job Title: ",jobTitle);
   }
