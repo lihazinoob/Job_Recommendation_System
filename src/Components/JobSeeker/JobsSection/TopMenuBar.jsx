@@ -10,7 +10,7 @@ const TopMenuBar = () => {
       <div className="px-4 py-2 flex justify-between items-center fixed z-50 shadow-md bg-primary text-secondary w-full">
         {/* Logo Section */}
         <div className="text-xl md:text-2xl font-bold">
-          <a href="/">JobSeeker</a>
+          <a href="/signup">JobSeeker</a>
         </div>
 
         {/* Navigation Links - Small on mobile, larger on desktop */}
